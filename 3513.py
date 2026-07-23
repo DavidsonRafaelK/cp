@@ -1,15 +1,18 @@
-nums = [1,2,3,4]
+from typing import List
 
-if len(nums) == 1:
-    print(1)
-else:
-    print(2 ** len(nums).bit_length())
+class Solution:
+    def uniqueXorTriplets(self, nums: List[int]) -> int:
+        if len(nums) < 3:
+            return len(nums)
+        else:
+            return 2 ** len(nums).bit_length()
 
-# # n = 5
-# # print(n.bit_length())
-
-# n = 1
-# print(2 ** n.bit_length())
-
-# n = 2
-# print(2 ** n.bit_length())
+if __name__ == "__main__":
+    sol = Solution()
+    
+    test_nums = [1, 2, 3, 4]
+    
+    hasil = sol.uniqueXorTriplets(test_nums)
+    
+    print(f"Input: {test_nums}")
+    print(f"Output: {hasil}")
